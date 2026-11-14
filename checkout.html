@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа — CofeeBean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">☕ CofeeBean</a>
+      <nav class="main-nav">
+        <a href="index.html">Меню</a>
+        <a href="cart.html" class="cart-link">Корзина <span class="badge">2</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="cart.html" class="back-link">← Назад в корзину</a>
+
+    <section class="panel form-panel">
+      <h1>Оформление заказа</h1>
+      
+      <div class="order-summary">
+        <strong>Состав заказа:</strong><br>
+        Капучино 300мл (1 шт.) — 220 ₽<br>
+        Круассан классический (1 шт.) — 180 ₽<br>
+        <strong>Итого: 400 ₽</strong>
+      </div>
+
+      <form action="result.html" method="get" class="form">
+        
+        <div class="field">
+          <label for="firstname">Имя</label>
+          <!-- id="firstname" (уникальный) -->
+          <input type="text" id="firstname" name="firstname" required 
+                 pattern="^[А-Яа-яЁёA-Za-z\-]+$" 
+                 minlength="2" 
+                 placeholder="Иван">
+          <div class="error-text">! Введите имя (только буквы, минимум 2)</div>
+        </div>
+
+        <div class="field">
+          <label for="lastname">Фамилия</label>
+          <!-- id="lastname" (уникальный) -->
+          <input type="text" id="lastname" name="lastname" required 
+                 pattern="^[А-Яа-яЁёA-Za-z\-]+$" 
+                 minlength="2" 
+                 placeholder="Иванов">
+          <div class="error-text">! Введите фамилию (только буквы, минимум 2)</div>
+        </div>
+
+         <div class="field">
+          <label for="phone">Телефон</label>
+          <!-- Жесткая проверка: только цифры, пробелы, скобки и дефисы -->
+          <input type="tel" id="phone" name="phone" required 
+                 pattern="[0-9\s\-\(\)\+]+" 
+                 minlength="10"
+                 maxlength="18"
+                 title="Введите номер телефона (только цифры, например: +7 999 123-45-67)"
+                 placeholder="+7 (999) 123-45-67">
+          <div class="error-text">! Введите корректный номер телефона</div>
+        </div>
+
+        <div class="field">
+          <!-- label связан с select через for="time" -->
+          <label for="time">Время получения</label>
+          <select id="time" name="time" required>
+            <option value="" disabled selected>Не выбрано</option>
+            <option value="15:10">15:10</option>
+            <option value="15:30">15:30</option>
+            <option value="16:00">16:00</option>
+            <option value="16:30">16:30</option>
+          </select>
+          <div class="error-text">! E2: Выберите время получения</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Подтвердить заказ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 CofeeBean. Учебный проект.</p>
+    </div>
+  </footer>
+</body>
+</html>

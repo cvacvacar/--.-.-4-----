@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина — CofeeBean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">☕ CofeeBean</a>
+      <nav class="main-nav">
+        <a href="index.html">Меню</a>
+        <a href="cart.html" class="cart-link active">Корзина <span class="badge">2</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-link">← Вернуться в меню</a>
+    
+    <section class="panel">
+      <h1>Ваш заказ</h1>
+      
+      <ul class="cart-list">
+        <li class="cart-item">
+          <img src="images/11796daee867e1553b3d991bfcaa5bfa.jpg" alt="Капучино" class="cart-img">
+          <div class="cart-info">
+            <h4>Капучино 300мл</h4>
+            <span>220 ₽</span>
+          </div>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+        </li>
+        <li class="cart-item">
+          <img src="images/круассан.jpg" alt="Круассан" class="cart-img">
+          <div class="cart-info">
+            <h4>Круассан классический</h4>
+            <span>180 ₽</span>
+          </div>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="cart-total">
+        <strong>Итого к оплате:</strong>
+        <strong>400 ₽</strong>
+      </div>
+
+      <a href="checkout.html" class="btn btn-primary btn-full">Оформить предзаказ</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 CofeeBean. Учебный проект.</p>
+    </div>
+  </footer>
+</body>
+</html>
